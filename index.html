@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد ميلاد ندى 🎉</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            color: white;
+            padding: 2rem;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .birthday-img {
+            width: 300px;
+            border-radius: 20px;
+            margin: 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border: 5px solid white;
+        }
+
+        .message {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 20px;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .balloons {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem;
+            font-size: 2rem;
+            animation: float 3s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        .hearts {
+            position: fixed;
+            font-size: 1.5rem;
+            color: #ff4081;
+            animation: hearts 2s infinite;
+        }
+
+        @keyframes hearts {
+            0% { opacity: 0; transform: translateY(100); }
+            40% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-100px); }
+        }
+    </style>
+</head>
+<body background="background.png">
+    <div class="header">
+        <h1>🎂 عيد ميلاد سعيد يا ندى! 🎈</h1>
+    </div>
+
+    <img src="cake.jpeg" alt="كعكة عيد ميلاد" class="birthday-img">
+    
+    <div class="message">
+        <p>🎉 🎊 🎈</p>
+        <p>كل عام وأنتِ أجمل وأسعد يا ندى!</p>
+        <p>أمنياتنا لكِ بالسعادة الدائمة والنجاح في كل خطوة</p>
+        <img src="Nada.jpg" alt="Nada" height="400" width="300">
+        <p>🎁 ⭐️ 🍭</p>
+    </div>
+
+    <div class="balloons">
+        🎈🎈🎈🎈🎈
+    </div>
+
+    <script>
+        // إضافة قلوب متحركة
+        function createHearts() {
+            const heart = document.createElement('div');
+            heart.className = 'hearts';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 2000);
+        }
+
+        setInterval(createHearts, 300);
+    </script>
+</body>
+</html>
